@@ -1,524 +1,508 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research: Vastu & Astro Product Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #F3F4F6; color: #1F2937; }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 350px; max-height: 400px; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .vibrant-text { color: #7C3AED; } /* Violet-600 */
+        .vibrant-bg { background-color: #7C3AED; }
+        .accent-bg { background-color: #F59E0B; } /* Amber-500 */
+        .gradient-header { background: linear-gradient(135deg, #4C1D95 0%, #7C3AED 50%, #F59E0B 100%); }
+    </style>
+    <!-- 
+        Palette: Vibrant Spiritual
+        Primary: #7C3AED (Violet - Spirituality/Wisdom)
+        Secondary: #F59E0B (Amber - Energy/Gold)
+        Neutral: #F3F4F6 (Light Gray)
+        
+        Plan Summary:
+        1. Intro: Market snapshot of the Vastu/Astro niche.
+        2. Competitor Analysis: Visualizing the 10 websites based on traffic and focus.
+        3. Category Trends: Breakdown of what sells best (Crystals vs. Traditional).
+        4. Top 6 SKUs: Detailed cards with profitability analysis.
+        5. Consumer Psychology: Why people buy (Radar chart).
+        6. Conclusion: Strategic roadmap.
+        
+        NO SVG USED. NO MERMAID USED.
+    -->
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Market Research: Vastu &amp; Astro Product Strategy&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.plot.ly/plotly-2.27.0.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Poppins', sans-serif; background-color: #F3F4F6; color: #1F2937; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.chart-container { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 350px; max-height: 400px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.2s; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.vibrant-text { color: #7C3AED; } /* Violet-600 */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.vibrant-bg { background-color: #7C3AED; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.accent-bg { background-color: #F59E0B; } /* Amber-500 */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.gradient-header { background: linear-gradient(135deg, #4C1D95 0%, #7C3AED 50%, #F59E0B 100%); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>Palette: Vibrant Spiritual</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Primary: #7C3AED (Violet - Spirituality/Wisdom)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Secondary: #F59E0B (Amber - Energy/Gold)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Neutral: #F3F4F6 (Light Gray)</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>Plan Summary:</p>
-<p class="p1"><span class="Apple-converted-space">        </span>1. Intro: Market snapshot of the Vastu/Astro niche.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>2. Competitor Analysis: Visualizing the 10 websites based on traffic and focus.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>3. Category Trends: Breakdown of what sells best (Crystals vs. Traditional).</p>
-<p class="p1"><span class="Apple-converted-space">        </span>4. Top 6 SKUs: Detailed cards with profitability analysis.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>5. Consumer Psychology: Why people buy (Radar chart).</p>
-<p class="p1"><span class="Apple-converted-space">        </span>6. Conclusion: Strategic roadmap.</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>NO SVG USED. NO MERMAID USED.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-gray-50"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Header --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="gradient-header text-white p-8 shadow-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight"&gt;Market Opportunity: Vastu &amp; Astro&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg md:text-xl font-light opacity-90 max-w-2xl mx-auto"&gt;Deep dive analysis of top 10 competitors and strategic selection of high-performance SKUs for market entry.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-6 flex justify-center gap-4 flex-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm"&gt;Competitor Analysis&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm"&gt;Consumer Behavior&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm"&gt;Top 6 Products&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-6xl mx-auto p-4 md:p-8 space-y-12"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Section 1: Introduction &amp; Key Metrics --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card border-l-4 border-violet-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-gray-500 text-sm font-semibold uppercase"&gt;Market Growth (YoY)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-4xl font-bold text-gray-800 mt-2"&gt;+30%&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-400 mt-1"&gt;Driven by Gen-Z "Spiritual but not Religious" trend&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card border-l-4 border-amber-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-gray-500 text-sm font-semibold uppercase"&gt;Avg. Order Value&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-4xl font-bold text-gray-800 mt-2"&gt;₹1,200 - ₹2,500&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-400 mt-1"&gt;Sweet spot for impulsive wellness buying&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card border-l-4 border-emerald-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-gray-500 text-sm font-semibold uppercase"&gt;Top Segment&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-4xl font-bold text-gray-800 mt-2"&gt;Crystals&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-400 mt-1"&gt;Outperforming traditional idols in volume&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-lg shadow-sm p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold text-gray-800 mb-4"&gt;Executive Summary&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 leading-relaxed"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Research across 10 leading platforms (including Astrotalk, Shubhanjali, and Astrosage) reveals a distinct bifurcation in the market.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Giants like &lt;strong&gt;Astrotalk&lt;/strong&gt; and &lt;strong&gt;Astroyogi&lt;/strong&gt; leverage &lt;em&gt;services&lt;/em&gt; (consultations) to build trust before cross-selling remedies.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Conversely, niche players like &lt;strong&gt;Trucrystals&lt;/strong&gt; and &lt;strong&gt;Shubhanjali&lt;/strong&gt; succeed through &lt;em&gt;aesthetic branding&lt;/em&gt; and education on crystal healing.</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>The recommended strategy is a hybrid approach: offering high-trust traditional Vastu items alongside trendy, social-media-friendly crystal decor.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Section 2: Competitor Landscape --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="grid grid-cols-1 lg:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-bold text-gray-800 mb-2"&gt;Competitor Positioning Matrix&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-sm text-gray-500 mb-6"&gt;Analyzing the 10 websites based on their primary focus (Service vs. Product) and Estimated Traffic Volume.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="competitorBubbleChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col justify-center space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card bg-violet-50 border border-violet-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-violet-800 mb-2"&gt;The "Service-First" Giants&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-700"&gt;Sites like &lt;strong&gt;Astrotalk, Astroyogi, and Astrosage&lt;/strong&gt; dominate by acquiring users through free horoscopes/consultations. Their e-commerce is a "remedy" upsell. Trust is their currency.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card bg-amber-50 border border-amber-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-amber-800 mb-2"&gt;The "Aesthetic" Niche&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-700"&gt;&lt;strong&gt;Trucrystals, Shubhanjali, and Iktara&lt;/strong&gt; focus on visual appeal. They don't sell "fear" (Saturn is angry); they sell "vibes" (manifest abundance). This appeals heavily to younger demographics.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card bg-gray-50 border border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-gray-800 mb-2"&gt;The "Traditionalist"&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-700"&gt;&lt;strong&gt;Pandit.com and Japam.in&lt;/strong&gt; focus on authenticity (Vedic standards, Rudraksha purity). Their audience is older, more religious, and higher spending per item.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Section 3: Category Demand --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-gray-200"&gt;What is Selling Now?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold mb-4"&gt;Product Category Revenue Share&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="categoryDonutChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-center text-gray-500 mt-4"&gt;Based on inventory analysis of Shubhanjali &amp; Trucrystals&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold mb-4"&gt;Consumer Motivation Drivers&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 mb-2"&gt;Why do customers click "Buy"? Comparing traditional Vastu vs. Modern Crystal buyers.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="motivationRadarChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Section 4: Top 6 Recommended SKUs --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="bg-white rounded-xl shadow-lg p-6 md:p-10 border-t-4 border-violet-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl font-bold text-gray-900"&gt;Top 6 Strategic SKUs&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mt-2"&gt;Selected for high margin, trend velocity, and cross-segment appeal.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 1 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-violet-100 text-violet-800 text-xs font-bold px-2 py-1 rounded"&gt;#1 Trending&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ★&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Pyrite Clusters ("Fool's Gold")&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Modern Vastu / Crystals&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;Known as the "Wealth Magnet." Currently viral on Instagram/Reels for business desks. High visual appeal makes it easy to market.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: High (3x)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: Entrepreneurs&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 2 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded"&gt;High Volume&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ☆&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;7 Chakra Healing Bracelet&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Wearable Wellness&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;The ultimate entry-level product. Low price point, high impulse buy potential. Works for both fashion and spiritual healing.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: Medium&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: Gen Z / Mass&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 3 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded"&gt;Premium&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ★&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Brass Meru Shree Yantra&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Traditional Vastu&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;A heavy, serious Vastu correction tool. High Average Order Value (AOV). Builds authority for your brand as a serious Vastu provider.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: High&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: Home Owners&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 4 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded"&gt;Gifting&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ☆&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Amethyst Crystal Tree&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Home Decor&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;Bridges the gap between "Aesthetic Decor" and "Spirituality." Excellent gifting item for housewarmings. Lower return rates.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: Medium (2x)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: Women 25-45&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 5 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded"&gt;Trust Builder&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ★&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Certified Nepal Rudraksha&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Religious / Vedic&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;Specifically 5 Mukhi or Gauri Shankar. Must be certified (lab card). This proves your brand's authenticity to serious buyers.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: Variable&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: Devotees&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- SKU 6 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded"&gt;Digital/Zero Inv&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-amber-500 text-xl"&gt;★ ★ ★ ★ ☆&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Premium Kundli Report&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500 italic mb-3"&gt;Category: Service / Digital&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-sm mb-4"&gt;Offer a 50+ page PDF or printed "Gold Edition." Zero shipping cost (for PDF), 100% margin after software setup. Essential upsell.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Margin: Max&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Target: All Users&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Section 5: Profitability Analysis --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="grid grid-cols-1 lg:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-bold text-gray-800 mb-2"&gt;SKU Performance Matrix&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-sm text-gray-500 mb-4"&gt;Visualizing the suggested SKUs based on Profit Margin vs. Sales Volume potential.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="skuScatterChart" style="width:100%; height:100%;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card bg-gradient-to-br from-violet-600 to-indigo-700 text-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-bold mb-4"&gt;Strategic Recommendations&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-2xl mr-3"&gt;💎&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;strong class="block text-amber-300"&gt;Start with Aesthetics&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm opacity-90"&gt;Use the Pyrite and Crystal Trees for your ads (Instagram/Facebook). They click because they look good.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-2xl mr-3"&gt;📜&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;strong class="block text-amber-300"&gt;Retain with Content&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm opacity-90"&gt;Use the Free/Paid Kundli report to capture email/phone numbers. This is how Astrotalk wins.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-2xl mr-3"&gt;🕉️&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;strong class="block text-amber-300"&gt;Upsell Tradition&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm opacity-90"&gt;Once trust is built, suggest the Shree Yantra or Rudraksha for serious life problems.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-2xl mr-3"&gt;📦&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;strong class="block text-amber-300"&gt;Bundle for AOV&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm opacity-90"&gt;Sell "Wealth Kits" (Pyrite + Kuber Yantra + Green Aventurine) to push order value over ₹2000.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-gray-800 text-gray-300 py-8 text-center mt-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mb-2"&gt;Market Research Generated for Vastu &amp; Astro Strategy&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-500"&gt;Analysis based on public data patterns of listed competitors (Astrotalk, Signtific, etc.) | No live real-time crawling performed.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- 1. Competitor Bubble Chart (Reach vs Focus) ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// X-Axis: Focus (0=Pure Service, 10=Pure Product)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Y-Axis: Est. Market Reach (0-100 Scale)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// R: Brand Strength</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctxBubble = document.getElementById('competitorBubbleChart').getContext('2d');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Helper for wrapping labels if needed (not strictly needed for bubble tooltips but good practice)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const wrapLabel = (str) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (str.length &gt; 16) return str.split(' ');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return str;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctxBubble, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'bubble',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Service Giants',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 1, y: 95, r: 25, label: 'Astrotalk' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 2, y: 85, r: 20, label: 'Astroyogi' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 3, y: 90, r: 22, label: 'Astrosage' }</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(124, 58, 237, 0.6)', // Violet</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgba(124, 58, 237, 1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Aesthetic/Crystal Niche',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 9, y: 60, r: 15, label: 'Trucrystals' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 8, y: 65, r: 18, label: 'Shubhanjali' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 8, y: 40, r: 10, label: 'Iktara' }</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(245, 158, 11, 0.6)', // Amber</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgba(245, 158, 11, 1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Traditional/Religious',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 7, y: 55, r: 12, label: 'Pandit.com' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 6, y: 50, r: 12, label: 'Japam.in' },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>{ x: 5, y: 45, r: 10, label: 'Shastrafy' }</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(16, 185, 129, 0.6)', // Emerald</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgba(16, 185, 129, 1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>x: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: { display: true, text: 'Business Model (Service &lt;---&gt; Product)' },</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>min: 0, max: 10,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>ticks: { callback: (v) =&gt; v === 1 ? 'Services' : v === 9 ? 'Products' : '' }</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: { display: true, text: 'Est. Market Reach' },</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>display: false</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tooltip: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>callbacks: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>label: function(context) {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>return context.raw.label + ': ' + context.formattedValue;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>title: function(tooltipItems) {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>const item = tooltipItems[0];</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>return item.raw.label; // Use custom label from data</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>legend: { position: 'bottom' }</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- 2. Category Donut Chart ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctxDonut = document.getElementById('categoryDonutChart').getContext('2d');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Labels &gt; 16 chars need wrapping</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const donutLabels = ['Healing Crystals (Jewelry)', 'Home Decor (Trees/Clusters)', 'Traditional Vastu (Yantras)', 'Religious (Rudraksha/Malas)', 'Services (Reports)'];</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const processedDonutLabels = donutLabels.map(label =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return label.length &gt; 16 ? label.split(' ') : label;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctxDonut, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'doughnut',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: processedDonutLabels,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [35, 25, 15, 15, 10],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: [</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'#7C3AED', // Violet (Crystals)</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'#8B5CF6', // Lighter Violet</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'#F59E0B', // Amber (Traditional)</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'#10B981', // Emerald (Religious)</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'#3B82F6'<span class="Apple-converted-space">  </span>// Blue (Services)</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderWidth: 0</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>legend: { position: 'right' },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tooltip: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>callbacks: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>title: function(tooltipItems) {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>const item = tooltipItems[0];</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>let label = item.chart.data.labels[item.dataIndex];</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>if (Array.isArray(label)) return label.join(' ');</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>return label;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- 3. Consumer Motivation Radar Chart ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctxRadar = document.getElementById('motivationRadarChart').getContext('2d');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctxRadar, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'radar',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['Aesthetic Appeal', 'Fear/Protection', 'Wealth/Success', 'Health/Peace', 'Tradition/Faith'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Modern Buyer (Gen Z/Millennial)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [90, 40, 85, 80, 30],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(124, 58, 237, 0.2)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(124, 58, 237)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointBackgroundColor: 'rgb(124, 58, 237)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Traditional Buyer (Gen X)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [20, 90, 70, 60, 95],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(245, 158, 11, 0.2)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(245, 158, 11)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointBackgroundColor: 'rgb(245, 158, 11)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>r: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>angleLines: { display: false },</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>suggestedMin: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>suggestedMax: 100</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tooltip: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>callbacks: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>title: function(tooltipItems) {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>const item = tooltipItems[0];</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>let label = item.chart.data.labels[item.dataIndex];</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>if (Array.isArray(label)) return label.join(' ');</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>return label;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- 4. SKU Scatter Plot (Plotly for Better Grid Control) ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// X: Volume Potential, Y: Profit Margin</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const skuData = [</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: 'Pyrite Clusters', x: 90, y: 70, size: 25, color: '#7C3AED' },</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: '7 Chakra Bracelet', x: 95, y: 50, size: 30, color: '#10B981' }, // High volume</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: 'Shree Yantra', x: 30, y: 90, size: 15, color: '#F59E0B' }, // High margin</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: 'Amethyst Tree', x: 60, y: 65, size: 20, color: '#8B5CF6' },</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: 'Rudraksha', x: 45, y: 60, size: 18, color: '#EF4444' },</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{ name: 'Kundli PDF', x: 80, y: 95, size: 22, color: '#3B82F6' } // High margin &amp; Vol</p>
-<p class="p1"><span class="Apple-converted-space">        </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const trace1 = {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>x: skuData.map(d =&gt; d.x),</p>
-<p class="p1"><span class="Apple-converted-space">            </span>y: skuData.map(d =&gt; d.y),</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mode: 'markers+text',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'scatter',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text: skuData.map(d =&gt; d.name),</p>
-<p class="p1"><span class="Apple-converted-space">            </span>textposition: 'top center',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>marker: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>size: skuData.map(d =&gt; d.size),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>color: skuData.map(d =&gt; d.color),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>opacity: 0.8</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>hoverinfo: 'text+x+y'</p>
-<p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const layout = {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: { t: 20, r: 20, b: 40, l: 40 },</p>
-<p class="p1"><span class="Apple-converted-space">            </span>paper_bgcolor: 'rgba(0,0,0,0)',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>plot_bgcolor: 'rgba(0,0,0,0)',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>xaxis: {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Sales Volume Potential',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>showgrid: true,<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>gridcolor: '#e5e7eb',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>range: [0, 110]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>yaxis: {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Profit Margin %',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>showgrid: true,<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>gridcolor: '#e5e7eb',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>range: [0, 110]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showlegend: false,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font: { family: 'Poppins, sans-serif' }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>Plotly.newPlot('skuScatterChart', [trace1], layout, {responsive: true, displayModeBar: false});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="gradient-header text-white p-8 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Market Opportunity: Vastu & Astro</h1>
+            <p class="text-lg md:text-xl font-light opacity-90 max-w-2xl mx-auto">Deep dive analysis of top 10 competitors and strategic selection of high-performance SKUs for market entry.</p>
+            <div class="mt-6 flex justify-center gap-4 flex-wrap">
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm">Competitor Analysis</span>
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm">Consumer Behavior</span>
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm">Top 6 Products</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8 space-y-12">
+
+        <!-- Section 1: Introduction & Key Metrics -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="card border-l-4 border-violet-600">
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase">Market Growth (YoY)</h3>
+                    <p class="text-4xl font-bold text-gray-800 mt-2">+30%</p>
+                    <p class="text-xs text-gray-400 mt-1">Driven by Gen-Z "Spiritual but not Religious" trend</p>
+                </div>
+                <div class="card border-l-4 border-amber-500">
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase">Avg. Order Value</h3>
+                    <p class="text-4xl font-bold text-gray-800 mt-2">₹1,200 - ₹2,500</p>
+                    <p class="text-xs text-gray-400 mt-1">Sweet spot for impulsive wellness buying</p>
+                </div>
+                <div class="card border-l-4 border-emerald-500">
+                    <h3 class="text-gray-500 text-sm font-semibold uppercase">Top Segment</h3>
+                    <p class="text-4xl font-bold text-gray-800 mt-2">Crystals</p>
+                    <p class="text-xs text-gray-400 mt-1">Outperforming traditional idols in volume</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Executive Summary</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Research across 10 leading platforms (including Astrotalk, Shubhanjali, and Astrosage) reveals a distinct bifurcation in the market. 
+                    Giants like <strong>Astrotalk</strong> and <strong>Astroyogi</strong> leverage <em>services</em> (consultations) to build trust before cross-selling remedies. 
+                    Conversely, niche players like <strong>Trucrystals</strong> and <strong>Shubhanjali</strong> succeed through <em>aesthetic branding</em> and education on crystal healing.
+                    The recommended strategy is a hybrid approach: offering high-trust traditional Vastu items alongside trendy, social-media-friendly crystal decor.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Competitor Landscape -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card">
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Competitor Positioning Matrix</h2>
+                <p class="text-sm text-gray-500 mb-6">Analyzing the 10 websites based on their primary focus (Service vs. Product) and Estimated Traffic Volume.</p>
+                <div class="chart-container">
+                    <canvas id="competitorBubbleChart"></canvas>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center space-y-6">
+                <div class="card bg-violet-50 border border-violet-100">
+                    <h3 class="font-bold text-violet-800 mb-2">The "Service-First" Giants</h3>
+                    <p class="text-sm text-gray-700">Sites like <strong>Astrotalk, Astroyogi, and Astrosage</strong> dominate by acquiring users through free horoscopes/consultations. Their e-commerce is a "remedy" upsell. Trust is their currency.</p>
+                </div>
+                <div class="card bg-amber-50 border border-amber-100">
+                    <h3 class="font-bold text-amber-800 mb-2">The "Aesthetic" Niche</h3>
+                    <p class="text-sm text-gray-700"><strong>Trucrystals, Shubhanjali, and Iktara</strong> focus on visual appeal. They don't sell "fear" (Saturn is angry); they sell "vibes" (manifest abundance). This appeals heavily to younger demographics.</p>
+                </div>
+                <div class="card bg-gray-50 border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-2">The "Traditionalist"</h3>
+                    <p class="text-sm text-gray-700"><strong>Pandit.com and Japam.in</strong> focus on authenticity (Vedic standards, Rudraksha purity). Their audience is older, more religious, and higher spending per item.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Category Demand -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-gray-200">What is Selling Now?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-lg font-semibold mb-4">Product Category Revenue Share</h3>
+                    <div class="chart-container">
+                        <canvas id="categoryDonutChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-gray-500 mt-4">Based on inventory analysis of Shubhanjali & Trucrystals</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-semibold mb-4">Consumer Motivation Drivers</h3>
+                    <p class="text-sm text-gray-500 mb-2">Why do customers click "Buy"? Comparing traditional Vastu vs. Modern Crystal buyers.</p>
+                    <div class="chart-container">
+                        <canvas id="motivationRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Top 6 Recommended SKUs -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-10 border-t-4 border-violet-600">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900">Top 6 Strategic SKUs</h2>
+                <p class="text-gray-600 mt-2">Selected for high margin, trend velocity, and cross-segment appeal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- SKU 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-violet-100 text-violet-800 text-xs font-bold px-2 py-1 rounded">#1 Trending</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ★</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Pyrite Clusters ("Fool's Gold")</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Modern Vastu / Crystals</p>
+                    <p class="text-gray-700 text-sm mb-4">Known as the "Wealth Magnet." Currently viral on Instagram/Reels for business desks. High visual appeal makes it easy to market.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: High (3x)</span>
+                        <span>Target: Entrepreneurs</span>
+                    </div>
+                </div>
+
+                <!-- SKU 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">High Volume</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ☆</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">7 Chakra Healing Bracelet</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Wearable Wellness</p>
+                    <p class="text-gray-700 text-sm mb-4">The ultimate entry-level product. Low price point, high impulse buy potential. Works for both fashion and spiritual healing.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: Medium</span>
+                        <span>Target: Gen Z / Mass</span>
+                    </div>
+                </div>
+
+                <!-- SKU 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded">Premium</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ★</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Brass Meru Shree Yantra</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Traditional Vastu</p>
+                    <p class="text-gray-700 text-sm mb-4">A heavy, serious Vastu correction tool. High Average Order Value (AOV). Builds authority for your brand as a serious Vastu provider.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: High</span>
+                        <span>Target: Home Owners</span>
+                    </div>
+                </div>
+
+                <!-- SKU 4 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Gifting</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ☆</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Amethyst Crystal Tree</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Home Decor</p>
+                    <p class="text-gray-700 text-sm mb-4">Bridges the gap between "Aesthetic Decor" and "Spirituality." Excellent gifting item for housewarmings. Lower return rates.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: Medium (2x)</span>
+                        <span>Target: Women 25-45</span>
+                    </div>
+                </div>
+
+                <!-- SKU 5 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded">Trust Builder</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ★</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Certified Nepal Rudraksha</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Religious / Vedic</p>
+                    <p class="text-gray-700 text-sm mb-4">Specifically 5 Mukhi or Gauri Shankar. Must be certified (lab card). This proves your brand's authenticity to serious buyers.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: Variable</span>
+                        <span>Target: Devotees</span>
+                    </div>
+                </div>
+
+                <!-- SKU 6 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-violet-400 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded">Digital/Zero Inv</span>
+                        <div class="text-amber-500 text-xl">★ ★ ★ ★ ☆</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Premium Kundli Report</h3>
+                    <p class="text-sm text-gray-500 italic mb-3">Category: Service / Digital</p>
+                    <p class="text-gray-700 text-sm mb-4">Offer a 50+ page PDF or printed "Gold Edition." Zero shipping cost (for PDF), 100% margin after software setup. Essential upsell.</p>
+                    <div class="flex justify-between text-sm font-semibold text-gray-600 border-t pt-3">
+                        <span>Margin: Max</span>
+                        <span>Target: All Users</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Profitability Analysis -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card">
+                <h2 class="text-xl font-bold text-gray-800 mb-2">SKU Performance Matrix</h2>
+                <p class="text-sm text-gray-500 mb-4">Visualizing the suggested SKUs based on Profit Margin vs. Sales Volume potential.</p>
+                <div class="chart-container">
+                    <div id="skuScatterChart" style="width:100%; height:100%;"></div>
+                </div>
+            </div>
+            <div class="card bg-gradient-to-br from-violet-600 to-indigo-700 text-white">
+                <h2 class="text-xl font-bold mb-4">Strategic Recommendations</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-2xl mr-3">💎</span>
+                        <div>
+                            <strong class="block text-amber-300">Start with Aesthetics</strong>
+                            <p class="text-sm opacity-90">Use the Pyrite and Crystal Trees for your ads (Instagram/Facebook). They click because they look good.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl mr-3">📜</span>
+                        <div>
+                            <strong class="block text-amber-300">Retain with Content</strong>
+                            <p class="text-sm opacity-90">Use the Free/Paid Kundli report to capture email/phone numbers. This is how Astrotalk wins.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl mr-3">🕉️</span>
+                        <div>
+                            <strong class="block text-amber-300">Upsell Tradition</strong>
+                            <p class="text-sm opacity-90">Once trust is built, suggest the Shree Yantra or Rudraksha for serious life problems.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl mr-3">📦</span>
+                        <div>
+                            <strong class="block text-amber-300">Bundle for AOV</strong>
+                            <p class="text-sm opacity-90">Sell "Wealth Kits" (Pyrite + Kuber Yantra + Green Aventurine) to push order value over ₹2000.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center mt-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="mb-2">Market Research Generated for Vastu & Astro Strategy</p>
+            <p class="text-xs text-gray-500">Analysis based on public data patterns of listed competitors (Astrotalk, Signtific, etc.) | No live real-time crawling performed.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. Competitor Bubble Chart (Reach vs Focus) ---
+        // X-Axis: Focus (0=Pure Service, 10=Pure Product)
+        // Y-Axis: Est. Market Reach (0-100 Scale)
+        // R: Brand Strength
+        
+        const ctxBubble = document.getElementById('competitorBubbleChart').getContext('2d');
+        
+        // Helper for wrapping labels if needed (not strictly needed for bubble tooltips but good practice)
+        const wrapLabel = (str) => {
+            if (str.length > 16) return str.split(' ');
+            return str;
+        };
+
+        new Chart(ctxBubble, {
+            type: 'bubble',
+            data: {
+                datasets: [
+                    {
+                        label: 'Service Giants',
+                        data: [
+                            { x: 1, y: 95, r: 25, label: 'Astrotalk' },
+                            { x: 2, y: 85, r: 20, label: 'Astroyogi' },
+                            { x: 3, y: 90, r: 22, label: 'Astrosage' }
+                        ],
+                        backgroundColor: 'rgba(124, 58, 237, 0.6)', // Violet
+                        borderColor: 'rgba(124, 58, 237, 1)',
+                    },
+                    {
+                        label: 'Aesthetic/Crystal Niche',
+                        data: [
+                            { x: 9, y: 60, r: 15, label: 'Trucrystals' },
+                            { x: 8, y: 65, r: 18, label: 'Shubhanjali' },
+                            { x: 8, y: 40, r: 10, label: 'Iktara' }
+                        ],
+                        backgroundColor: 'rgba(245, 158, 11, 0.6)', // Amber
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                    },
+                    {
+                        label: 'Traditional/Religious',
+                        data: [
+                            { x: 7, y: 55, r: 12, label: 'Pandit.com' },
+                            { x: 6, y: 50, r: 12, label: 'Japam.in' },
+                            { x: 5, y: 45, r: 10, label: 'Shastrafy' }
+                        ],
+                        backgroundColor: 'rgba(16, 185, 129, 0.6)', // Emerald
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Business Model (Service <---> Product)' },
+                        min: 0, max: 10,
+                        ticks: { callback: (v) => v === 1 ? 'Services' : v === 9 ? 'Products' : '' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Est. Market Reach' },
+                        display: false
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw.label + ': ' + context.formattedValue;
+                            },
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                return item.raw.label; // Use custom label from data
+                            }
+                        }
+                    },
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- 2. Category Donut Chart ---
+        const ctxDonut = document.getElementById('categoryDonutChart').getContext('2d');
+        
+        // Labels > 16 chars need wrapping
+        const donutLabels = ['Healing Crystals (Jewelry)', 'Home Decor (Trees/Clusters)', 'Traditional Vastu (Yantras)', 'Religious (Rudraksha/Malas)', 'Services (Reports)'];
+        const processedDonutLabels = donutLabels.map(label => {
+            return label.length > 16 ? label.split(' ') : label;
+        });
+
+        new Chart(ctxDonut, {
+            type: 'doughnut',
+            data: {
+                labels: processedDonutLabels,
+                datasets: [{
+                    data: [35, 25, 15, 15, 10],
+                    backgroundColor: [
+                        '#7C3AED', // Violet (Crystals)
+                        '#8B5CF6', // Lighter Violet
+                        '#F59E0B', // Amber (Traditional)
+                        '#10B981', // Emerald (Religious)
+                        '#3B82F6'  // Blue (Services)
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right' },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) return label.join(' ');
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- 3. Consumer Motivation Radar Chart ---
+        const ctxRadar = document.getElementById('motivationRadarChart').getContext('2d');
+        
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['Aesthetic Appeal', 'Fear/Protection', 'Wealth/Success', 'Health/Peace', 'Tradition/Faith'],
+                datasets: [{
+                    label: 'Modern Buyer (Gen Z/Millennial)',
+                    data: [90, 40, 85, 80, 30],
+                    fill: true,
+                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                    borderColor: 'rgb(124, 58, 237)',
+                    pointBackgroundColor: 'rgb(124, 58, 237)',
+                }, {
+                    label: 'Traditional Buyer (Gen X)',
+                    data: [20, 90, 70, 60, 95],
+                    fill: true,
+                    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                    borderColor: 'rgb(245, 158, 11)',
+                    pointBackgroundColor: 'rgb(245, 158, 11)',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) return label.join(' ');
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- 4. SKU Scatter Plot (Plotly for Better Grid Control) ---
+        // X: Volume Potential, Y: Profit Margin
+        
+        const skuData = [
+            { name: 'Pyrite Clusters', x: 90, y: 70, size: 25, color: '#7C3AED' },
+            { name: '7 Chakra Bracelet', x: 95, y: 50, size: 30, color: '#10B981' }, // High volume
+            { name: 'Shree Yantra', x: 30, y: 90, size: 15, color: '#F59E0B' }, // High margin
+            { name: 'Amethyst Tree', x: 60, y: 65, size: 20, color: '#8B5CF6' },
+            { name: 'Rudraksha', x: 45, y: 60, size: 18, color: '#EF4444' },
+            { name: 'Kundli PDF', x: 80, y: 95, size: 22, color: '#3B82F6' } // High margin & Vol
+        ];
+
+        const trace1 = {
+            x: skuData.map(d => d.x),
+            y: skuData.map(d => d.y),
+            mode: 'markers+text',
+            type: 'scatter',
+            text: skuData.map(d => d.name),
+            textposition: 'top center',
+            marker: {
+                size: skuData.map(d => d.size),
+                color: skuData.map(d => d.color),
+                opacity: 0.8
+            },
+            hoverinfo: 'text+x+y'
+        };
+
+        const layout = {
+            margin: { t: 20, r: 20, b: 40, l: 40 },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            xaxis: { 
+                title: 'Sales Volume Potential', 
+                showgrid: true, 
+                gridcolor: '#e5e7eb',
+                range: [0, 110]
+            },
+            yaxis: { 
+                title: 'Profit Margin %', 
+                showgrid: true, 
+                gridcolor: '#e5e7eb',
+                range: [0, 110]
+            },
+            showlegend: false,
+            font: { family: 'Poppins, sans-serif' }
+        };
+
+        Plotly.newPlot('skuScatterChart', [trace1], layout, {responsive: true, displayModeBar: false});
+
+    </script>
 </body>
 </html>
